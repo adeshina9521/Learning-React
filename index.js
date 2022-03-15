@@ -11,11 +11,31 @@
 // h1.className = "header";
 // document.getElementById("root").append(h1)
 
-const page = (<div>
-                <h1>This is JSX</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim.</p>
-            </div>
-                )                
-ReactDOM.render( page
-                ,
-                 document.getElementById("root"))
+// const Navbar = (<nav>
+//                 <h1>A-CUBE</h1>
+//                 <ul>
+//                     <li>Pricing</li>
+//                     <li>Pricing</li>
+//                     <li>Pricing</li>
+//                 </ul>
+//             </nav>
+//                 )                
+// ReactDOM.render( Navbar
+//                 ,
+//                  document.getElementById("root"))
+
+const page = (
+    <div>
+        <img src="./react-logo.png" alt="" />
+        <h1>Fun facts about React</h1>
+        <ul>
+            <li>Was first released in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100K starts on Github</li>
+            <li>Is maintained by Facebook</li>
+            <li>Powers thousands of enterprises apps, including mobile apps</li>
+        </ul>   
+    </div>
+)
+
+ReactDOM.render(page, document.getElementById("root"))
