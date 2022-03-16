@@ -24,18 +24,55 @@
 //                 ,
 //                  document.getElementById("root"))
 
-const page = (
-    <div>
-        <img src="./react-logo.png" alt="" />
-        <h1>Fun facts about React</h1>
-        <ul>
-            <li>Was first released in 2013</li>
-            <li>Was originally created by Jordan Walke</li>
-            <li>Has well over 100K starts on Github</li>
-            <li>Is maintained by Facebook</li>
-            <li>Powers thousands of enterprises apps, including mobile apps</li>
-        </ul>   
-    </div>
-)
 
-ReactDOM.render(page, document.getElementById("root"))
+function Header(){
+    return(
+        <div>
+            <header>
+                <nav className="nav">
+                    <img className="nav-logo" src="./react-logo.png" alt="React Image" />
+                    <ul className="nav-items">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    )
+}
+
+function MainContent(){
+    return(
+            <div>
+                <h1>Reasons I'm Exited to learn React</h1>
+                <ol>
+                    <li>It's a popular library, so I'll be able to fit in with the cool kids!</li>
+                    <li>I'm more likely to get a job as a developer if I know React</li>
+                    <li>Has well over 100K starts on Github</li>
+                    <li>Is maintained by Facebook</li>
+                    <li>Powers thousands of enterprises apps, including mobile apps</li>
+                </ol>   
+            </div>
+    )
+}
+function Footer(){
+    return(
+        <div>
+            <footer>
+                "© 2022 Abdullateef development. All rights reserved."
+            </footer>
+        </div>
+    )
+}
+function Page(){
+    return(
+        <div>
+            <Header/>
+            <MainContent/>
+            <Footer/>
+        </div>
+
+    )
+}
+ReactDOM.render(<Page/>, document.getElementById("root"))
